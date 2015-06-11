@@ -26,6 +26,7 @@
 # Not an extensive implementation, more information at:
 # http://docs.ckan.org/en/ckan-2.2.2/api.html#get-able-api-functions
 
+from __future__ import unicode_literals
 import logging
 
 try:
@@ -47,6 +48,7 @@ class DadosGovBR(object):
     base_api_url = 'http://dados.gov.br/api'
     api_version = 3
     endpoint = '{}/{}/action'.format(base_api_url, api_version)
+    timeout = 4
 
     def _request(self, resource, **params):
         url = '{endpoint}/{resource}?{params}'.format(
