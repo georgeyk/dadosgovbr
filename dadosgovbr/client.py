@@ -36,6 +36,8 @@ except ImportError:
 
 import requests
 
+from .factory import model_dict_factory, model_items_factory
+
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +57,7 @@ class DadosGovBR(object):
             endpoint=self.endpoint, resource=resource, params=urlencode(params))
         logger.info('Request URL: {}'.format(url))
 
-        response = requests.get(url)
+        response = requests.get(url, timeout=self.timeout)
         logger.info('Response: status {}'.format(response.status_code))
 
         data = response.json()
@@ -72,20 +74,25 @@ class DadosGovBR(object):
     def search_resources(self, query, search_key='name', **kwargs):
         query = '{}:{}'.format(search_key, query)
         result = self._request('resource_search', query=query, **kwargs)
-        return result['results']
+        for resource in result['results']:
+            yield model_dict_factory('resource', resource)
 
     def search_dataset(self, query, **kwargs):
         result = self._request('package_search', q=query, **kwargs)
-        return result['results']
+        for dataset in result['results']:
+            yield model_dict_factory('dataset', dataset)
 
     def get_datasets(self):
-        return self._request('package_list')
+        return model_items_factory('dataset item', self._request('package_list'))
 
     def get_dataset(self, dataset_id):
-        return self._request('package_show', id=dataset_id)
+        dataset = self._request('package_show', id=dataset_id)
+        return model_dict_factory('dataset', dataset)
 
     def get_tags(self):
-        return self._request('tag_list')
+        tags = self._request('tag_list')
+        return model_items_factory('tag item', tags)
 
     def get_tag(self, tag_id):
-        return self._request('tag_show', id=tag_id)
+        tag = self._request('tag_show', id=tag_id)
+        return model_dict_factory('tag', tag)
