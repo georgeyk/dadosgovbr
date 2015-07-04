@@ -4,3 +4,4 @@ ipython
 ipdb
 wheel
 twine
+coveralls
