@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # vi:si:et:sw=4:sts=4:ts=4
 
+#
 # The MIT License (MIT)
 # Copyright (C) 2015 - George Y. Kussumoto <contato@georgeyk.com.br>
 #
@@ -21,9 +22,10 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+#
 
-from .exceptions import DadosGovBRException
-from .client import DadosGovBR
 
-__version__ = '0.1.0'
-__all__ = [DadosGovBRException, DadosGovBR]
+class DadosGovBRException(Exception):
+    """Generic wrapper for errors returned by the data API server
+    """
+    pass

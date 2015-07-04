@@ -36,14 +36,11 @@ except ImportError:
 
 import requests
 
+from .exceptions import DadosGovBRException
 from .factory import model_dict_factory, model_items_factory
 
 
 logger = logging.getLogger(__name__)
-
-
-class DadosGovBRException(Exception):
-    pass
 
 
 class DadosGovBR(object):
