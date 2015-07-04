@@ -1,2 +1,2 @@
-include README.md
+include README.md CHANGES.md
 recursive-include dadosgovbr *.py
