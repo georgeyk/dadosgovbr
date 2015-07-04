@@ -1,7 +1,8 @@
 # dadosgovbr
 
 [![Build Status](https://travis-ci.org/georgeyk/dadosgovbr.svg?branch=master)](https://travis-ci.org/georgeyk/dadosgovbr)
-[![Coverage Status](https://coveralls.io/repos/georgeyk/dadosgovbr/badge.svg)](https://coveralls.io/r/georgeyk/dadosgovbr)
+[![Coverage Status](https://coveralls.io/repos/georgeyk/dadosgovbr/badge.svg?branch=master)](https://coveralls.io/r/georgeyk/dadosgovbr?branch=master)
+
 
 ---
 
