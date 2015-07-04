@@ -31,11 +31,22 @@ def model_dict_factory(name, data):
     classname = ''.join([part.title() for part in name.split()])
     fields = ', '.join(data.keys())
     klass = namedtuple(classname, fields)
-    return klass(**data)
+    if data:
+        for key in data:
+            if isinstance(data[key], list):
+                data[key] = model_items_factory(key, data[key])
+            if isinstance(data[key], dict):
+                data[key] = model_dict_factory(key, data[key])
+        return klass(**data)
 
 
 def model_items_factory(name, items, field_name='name'):
     classname = ''.join([part.title() for part in name.split()])
     klass = namedtuple(classname, field_name)
     for item in items:
-        yield klass(item)
+        if isinstance(item, dict):
+            yield model_dict_factory(classname, item)
+        elif isinstance(item, list):
+            yield model_items_factory(classname, item)
+        else:
+            yield klass(item)
