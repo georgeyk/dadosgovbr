@@ -1,7 +1,6 @@
+-r requirements-test.txt
 pre-commit
-coverage
 ipython
 ipdb
 wheel
 twine
-coveralls

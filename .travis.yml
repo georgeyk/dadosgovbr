@@ -4,6 +4,6 @@ python:
   - "2.7"
 
 install: python setup.py -q install
-before_script: pip install -r requirements-devel.txt
+before_script: pip install -r requirements-test.txt
 script: coverage run --source dadosgovbr setup.py test
 after_success: coveralls
