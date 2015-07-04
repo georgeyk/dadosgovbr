@@ -4,5 +4,6 @@ python:
   - "2.7"
 
 install: python setup.py -q install
+before_script: pip install coverage
 script: coverage run --source dadosgovbr setup.py test
 after_success: coverwalls
