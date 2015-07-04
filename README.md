@@ -1,5 +1,9 @@
 # dadosgovbr
 
+[![Build Status](https://travis-ci.org/georgeyk/dadosgovbr.svg?branch=master)](https://travis-ci.org/georgeyk/dadosgovbr)
+
+---
+
 A library to programatically explore the Brazilian open data program.
 
 More details at [dados.gov.br][1]
