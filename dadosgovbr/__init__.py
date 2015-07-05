@@ -26,4 +26,4 @@ from .exceptions import DadosGovBRException
 from .client import DadosGovBR
 
 __version__ = '0.1.0'
-__all__ = [DadosGovBRException, DadosGovBR]
+__all__ = ['DadosGovBRException', 'DadosGovBR']
