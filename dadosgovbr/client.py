@@ -71,13 +71,11 @@ class DadosGovBR(object):
     def search_resources(self, query, search_key='name', **kwargs):
         query = '{}:{}'.format(search_key, query)
         result = self._request('resource_search', query=query, **kwargs)
-        for resource in result['results']:
-            yield model_dict_factory('resource', resource)
+        return model_list_factory('resource', result['results'])
 
-    def search_dataset(self, query, **kwargs):
+    def search_datasets(self, query, **kwargs):
         result = self._request('package_search', q=query, **kwargs)
-        for dataset in result['results']:
-            yield model_dict_factory('dataset', dataset)
+        return model_list_factory('dataset', result['results'])
 
     def get_datasets(self):
         return model_list_factory('dataset item', self._request('package_list'))
