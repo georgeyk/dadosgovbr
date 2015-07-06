@@ -34,19 +34,19 @@ def model_dict_factory(name, data):
     if data:
         for key in data:
             if isinstance(data[key], list):
-                data[key] = model_items_factory(key, data[key])
+                data[key] = model_list_factory(key, data[key])
             if isinstance(data[key], dict):
                 data[key] = model_dict_factory(key, data[key])
         return klass(**data)
 
 
-def model_items_factory(name, items, field_name='name'):
+def model_list_factory(name, items, field_name='name'):
     classname = ''.join([part.title() for part in name.split()])
     klass = namedtuple(classname, field_name)
     for item in items:
         if isinstance(item, dict):
             yield model_dict_factory(classname, item)
         elif isinstance(item, list):
-            yield model_items_factory(classname, item)
+            yield model_list_factory(classname, item)
         else:
             yield klass(item)

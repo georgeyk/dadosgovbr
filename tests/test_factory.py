@@ -27,44 +27,44 @@
 import types
 import unittest
 
-from dadosgovbr.factory import model_dict_factory, model_items_factory
+from dadosgovbr.factory import model_dict_factory, model_list_factory
 
 
 class ModelItemsFactoryTestCase(unittest.TestCase):
     def test_empty(self):
-        items = list(model_items_factory('test', []))
+        items = list(model_list_factory('test', []))
         self.assertEquals(items, [])
 
     def test_simple(self):
-        item = list(model_items_factory('test', ['foo']))[0]
+        item = list(model_list_factory('test', ['foo']))[0]
         self.assertEquals(item.__class__.__name__, 'Test')
         self.assertEquals(item.name, 'foo')
 
     def test_simple_with_field_name(self):
-        item = list(model_items_factory('test', ['foo'], field_name='bar'))[0]
+        item = list(model_list_factory('test', ['foo'], field_name='bar'))[0]
         self.assertTrue(hasattr(item, 'bar'))
         self.assertEquals(item.bar, 'foo')
 
     def test_simple_with_multiple_values(self):
-        items = model_items_factory('test', range(10))
+        items = model_list_factory('test', range(10))
         for i, item in enumerate(items):
             self.assertEquals(item.name, i)
 
     def test_composed_class_name(self):
-        item = list(model_items_factory('test bar', ['foo']))[0]
+        item = list(model_list_factory('test bar', ['foo']))[0]
         self.assertEquals(item.__class__.__name__, 'TestBar')
 
-        item = list(model_items_factory('test_bar', ['foo']))[0]
+        item = list(model_list_factory('test_bar', ['foo']))[0]
         self.assertEquals(item.__class__.__name__, 'Test_Bar')
 
     def test_with_nested_dict(self):
-        item = list(model_items_factory('test', [{'foo': 'bar'}]))[0]
+        item = list(model_list_factory('test', [{'foo': 'bar'}]))[0]
         self.assertEquals(item.__class__.__name__, 'Test')
         self.assertTrue(hasattr(item, 'foo'))
         self.assertEquals(item.foo, 'bar')
 
     def test_with_nested_list(self):
-        item = list(model_items_factory('test', [['foo']]))[0]
+        item = list(model_list_factory('test', [['foo']]))[0]
         self.assertTrue(isinstance(item, types.GeneratorType))
         inner_item = list(item)[0]
         self.assertTrue(inner_item.__class__.__name__, 'Test')

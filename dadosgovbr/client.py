@@ -37,7 +37,7 @@ except ImportError:
 import requests
 
 from .exceptions import DadosGovBRException
-from .factory import model_dict_factory, model_items_factory
+from .factory import model_dict_factory, model_list_factory
 
 
 logger = logging.getLogger(__name__)
@@ -80,7 +80,7 @@ class DadosGovBR(object):
             yield model_dict_factory('dataset', dataset)
 
     def get_datasets(self):
-        return model_items_factory('dataset item', self._request('package_list'))
+        return model_list_factory('dataset item', self._request('package_list'))
 
     def get_dataset(self, dataset_id):
         dataset = self._request('package_show', id=dataset_id)
@@ -88,7 +88,7 @@ class DadosGovBR(object):
 
     def get_tags(self):
         tags = self._request('tag_list')
-        return model_items_factory('tag item', tags)
+        return model_list_factory('tag item', tags)
 
     def get_tag(self, tag_id):
         tag = self._request('tag_show', id=tag_id)
