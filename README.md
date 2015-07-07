@@ -19,6 +19,15 @@ Also, I feel more confortable exploring the data using a python shell with all t
 csv and so on.
 
 
+## Install
+
+Available in PyPi, just:
+
+```shell
+$ pip install dadosgovbr
+```
+
+
 ## Examples
 
 The library just provides an "object-wrapping" for the API results, so we can access every attribute as we
