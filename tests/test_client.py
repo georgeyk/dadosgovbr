@@ -52,13 +52,6 @@ class DadosGovBRClientTestCase(unittest.TestCase):
         self.assertEqual(len(resources), 2)
 
     @json_vcr.use_cassette()
-    def test_search_resources_with_unicode(self):
-        resources = list(self.api.search_resources(u'público', limit=5))
-        self.assertEqual(len(resources), 5)
-        for resource in resources:
-            self.assertTrue(u'público' in resource.name.lower())
-
-    @json_vcr.use_cassette()
     def test_search_resources_empty(self):
         resources = list(self.api.search_resources('arcoiro'))
         self.assertEqual(len(resources), 0)
