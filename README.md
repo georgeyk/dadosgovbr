@@ -21,7 +21,7 @@ csv and so on.
 
 ## Examples
 
-The library just provides a "object-wrapping" from the results of the API, so we can access every attribute as we
+The library just provides an "object-wrapping" from the results of the API, so we can access every attribute as we
 inspect any regular python object:
 
 ```python
@@ -33,7 +33,7 @@ Tag(vocabulary_id=None, packages=<generator object model_list_factory at 0x7f7da
 id=u'41a7ab78-3cec-44a3-b2c3-ca15ad55a50f', name=u'VT')
 ```
 
-Check the tests directory for more examples, like [this one][tests/example.py].
+Check the tests directory for more examples, like [this one][2].
 
 
 ## NOTE
@@ -43,3 +43,4 @@ Contributions are super-welcome. =)
 
 
 [1]: http://dados.gov.br/dataset
+[2]: tests/example.py
