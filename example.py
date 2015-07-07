@@ -24,12 +24,8 @@
 # SOFTWARE.
 #
 
-
-
 from __future__ import print_function, unicode_literals
 import csv
-import unittest
-unittest.skip('example code')
 
 import requests
 
