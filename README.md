@@ -35,7 +35,7 @@ inspect any regular python object:
 
 ```python
 
->>> from dadosgovbr DadosGovBR
+>>> from dadosgovbr import DadosGovBR
 >>> api = DadosGovBR()
 >>> api.get_tag('VT')
 Tag(vocabulary_id=None, packages=<generator object model_list_factory at 0x7f7dac17af00>, display_name=u'VT',
@@ -49,6 +49,14 @@ Check the tests directory for more examples, like [this one][2].
 
 This is very *work-in-progress* lib.
 Contributions are super-welcome. =)
+
+## Development
+
+1. fork the project
+2. create virtualenv (optional)
+3. pip install -r requirements-devel.txt
+4. pre-commit install
+5. tox
 
 
 [1]: http://dados.gov.br/dataset
