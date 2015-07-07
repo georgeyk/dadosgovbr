@@ -50,11 +50,14 @@ class DadosGovBR(object):
     timeout = 4
 
     def _request(self, resource, **params):
-        for key, value in params.iteritems():
-            if isinstance(value, unicode):
-                params[key] = value.encode('utf-8')
-            elif isinstance(value, str):
-                params[key] = value.decode('utf-8')
+        for key, value in params.items():
+            try:
+                if isinstance(value, unicode):
+                    params[key] = value.encode('utf-8')
+                elif isinstance(value, str):
+                    params[key] = value.decode('utf-8')
+            except NameError:  # python3
+                pass
 
         url = '{endpoint}/{resource}?{params}'.format(
             endpoint=self.endpoint, resource=resource, params=urlencode(params))
