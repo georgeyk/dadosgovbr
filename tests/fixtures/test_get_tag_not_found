@@ -1,0 +1,76 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-55-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/tag_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "365"
+                    ],
+                    "x-varnish": [
+                        "1042718381"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Mon, 06 Jul 2015 23:49:32 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the details of a tag and all its datasets.\\n\\n    :param id: the name or id of the tag\\n    :type id: string\\n\\n    :returns: the details of the tag, including a list of all of the tag's\\n        datasets and their details\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        }
+    ]
+}
