@@ -1,0 +1,76 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-55-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/resource_search?query=name%3Ap%C3%BAblico&limit=5"
+            },
+            "response": {
+                "status": {
+                    "message": "OK",
+                    "code": 200
+                },
+                "headers": {
+                    "content-length": [
+                        "6662"
+                    ],
+                    "x-varnish": [
+                        "1042726280"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 07 Jul 2015 00:54:09 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"\\n    Searches for resources satisfying a given search criteria.\\n\\n    It returns a dictionary with 2 fields: ``count`` and ``results``.  The\\n    ``count`` field contains the total number of Resources found without the\\n    limit or query parameters having an effect.  The ``results`` field is a\\n    list of dictized Resource objects.\\n\\n    The 'query' parameter is a required field.  It is a string of the form\\n    ``{field}:{term}`` or a list of strings, each of the same form.  Within\\n    each string, ``{field}`` is a field or extra field on the Resource domain\\n    object.\\n\\n    If ``{field}`` is ``\\\"hash\\\"``, then an attempt is made to match the\\n    `{term}` as a *prefix* of the ``Resource.hash`` field.\\n\\n    If ``{field}`` is an extra field, then an attempt is made to match against\\n    the extra fields stored against the Resource.\\n\\n    Note: The search is limited to search against extra fields declared in\\n    the config setting ``ckan.extra_resource_fields``.\\n\\n    Note: Due to a Resource's extra fields being stored as a json blob, the\\n    match is made against the json string representation.  As such, false\\n    positives may occur:\\n\\n    If the search criteria is: ::\\n\\n        query = \\\"field1:term1\\\"\\n\\n    Then a json blob with the string representation of: ::\\n\\n        {\\\"field1\\\": \\\"foo\\\", \\\"field2\\\": \\\"term1\\\"}\\n\\n    will match the search criteria!  This is a known short-coming of this\\n    approach.\\n\\n    All matches are made ignoring case; and apart from the ``\\\"hash\\\"`` field,\\n    a term matches if it is a substring of the field's value.\\n\\n    Finally, when specifying more than one search criteria, the criteria are\\n    AND-ed together.\\n\\n    The ``order`` parameter is used to control the ordering of the results.\\n    Currently only ordering one field is available, and in ascending order\\n    only.\\n\\n    The ``fields`` parameter is deprecated as it is not compatible with calling\\n    this action with a GET request to the action API.\\n\\n    The context may contain a flag, `search_query`, which if True will make\\n    this action behave as if being used by the internal search api.  ie - the\\n    results will not be dictized, and SearchErrors are thrown for bad search\\n    queries (rather than ValidationErrors).\\n\\n    :param query: The search criteria.  See above for description.\\n    :type query: string or list of strings of the form \\\"{field}:{term1}\\\"\\n    :param fields: Deprecated\\n    :type fields: dict of fields to search terms.\\n    :param order_by: A field on the Resource model that orders the results.\\n    :type order_by: string\\n    :param offset: Apply an offset to the query.\\n    :type offset: int\\n    :param limit: Apply a limit to the query.\\n    :type limit: int\\n\\n    :returns:  A dictionary with a ``count`` field, and a ``results`` field.\\n    :rtype: dict\\n\\n    \", \"success\": true, \"result\": {\"count\": 17, \"results\": [{\"resource_group_id\": \"3b65e564-3498-482b-93cf-c05b697798ac\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"678245f2-2aa4-4d79-8abc-02a8db3b5ef7\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Quantidade total de estabelecimentos de ensino b\\u00e1sico apurados por meio do Educacenso.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"Quantidade de estabelecimentos p\\u00fablicos de ensino b\\u00e1sico\", \"created\": \"2015-07-02T17:19:45.453573\", \"url\": \"http://api.pgi.gov.br/api/1/serie/2621.xml\", \"webstore_url\": \"www.simec.mec.gov.br\", \"position\": 0, \"revision_id\": \"f2fac234-05a7-4ed4-9f2e-6525decb2b0f\", \"resource_type\": null}, {\"resource_group_id\": \"5c9353b8-ed67-4835-b8ee-c32e203e81ec\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"8e6971be-7ecf-4581-bb9b-ae2cc592302e\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Informa\\u00e7\\u00f5es sobre servi\\u00e7os contidas no portal de servi\\u00e7os do governo federal www.servi\\u00e7os.gov.br\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": null, \"cache_url\": null, \"name\": \"Servicos P\\u00fablicos Federais para o Cidad\\u00e3o\", \"created\": \"2014-09-16T15:37:50.121654\", \"url\": \"http://www.servicos.gov.br/guiadeservicos.xml\", \"webstore_url\": null, \"position\": 0, \"revision_id\": \"27c60136-c765-4792-98dd-3477656d6602\", \"resource_type\": null}, {\"resource_group_id\": \"6193d8de-92aa-4f71-aad5-7d681c5f0ad0\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"d3c462a3-7c36-47e2-8cf9-b724eb370718\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"\", \"format\": \"zip+csv\", \"mimetype_inner\": \"text/csv\", \"url_type\": null, \"mimetype\": \"application/zip\", \"cache_url\": \"\", \"name\": \"Servidores e agentes p\\u00fablicos do Poder Executivo Federal\", \"created\": null, \"url\": \"http://arquivos.portaldatransparencia.gov.br/PortalTransparenciaEscolheTipoDePlanilha.asp?origem=Servidores&Planilha=0\", \"webstore_url\": \"\", \"position\": 0, \"revision_id\": \"56d3d396-fd88-4a9d-9a06-4b6e09e39a38\", \"resource_type\": \"file\"}, {\"resource_group_id\": \"3b65e564-3498-482b-93cf-c05b697798ac\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"494f6c67-950c-46d4-83e5-f357193216fd\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Quantidade total de estabelecimentos de ensino b\\u00e1sico apurados por meio do Educacenso.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Quantidade de estabelecimentos p\\u00fablicos de ensino b\\u00e1sico\", \"created\": \"2015-07-02T17:19:45.453600\", \"url\": \"http://api.pgi.gov.br/api/1/serie/2621.html\", \"webstore_url\": \"www.simec.mec.gov.br\", \"position\": 1, \"revision_id\": \"f2fac234-05a7-4ed4-9f2e-6525decb2b0f\", \"resource_type\": null}, {\"resource_group_id\": \"3b65e564-3498-482b-93cf-c05b697798ac\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"21c1e0bc-86f1-41ac-b4f4-9c3c36119ee8\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Quantidade total de estabelecimentos de ensino b\\u00e1sico apurados por meio do Educacenso.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"Quantidade de estabelecimentos p\\u00fablicos de ensino b\\u00e1sico\", \"created\": \"2015-07-02T17:19:45.453608\", \"url\": \"http://api.pgi.gov.br/api/1/serie/2621.json\", \"webstore_url\": \"www.simec.mec.gov.br\", \"position\": 2, \"revision_id\": \"f2fac234-05a7-4ed4-9f2e-6525decb2b0f\", \"resource_type\": null}]}}"
+                }
+            }
+        }
+    ]
+}
