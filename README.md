@@ -21,7 +21,7 @@ csv and so on.
 
 ## Examples
 
-The library just provides an "object-wrapping" from the results of the API, so we can access every attribute as we
+The library just provides an "object-wrapping" for the API results, so we can access every attribute as we
 inspect any regular python object:
 
 ```python
@@ -43,4 +43,4 @@ Contributions are super-welcome. =)
 
 
 [1]: http://dados.gov.br/dataset
-[2]: tests/example.py
+[2]: example.py
