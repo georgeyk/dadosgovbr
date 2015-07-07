@@ -44,7 +44,9 @@ with open(os.path.join(here, "CHANGES.md")) as changes:
     for line in changes:
         match = re.match('^#*\s*(?P<version>[0-9]+\.[0-9]+(\.[0-9]+)?)$', line)
         if match:
-            version = match.group("version")
+            version2 = match.group("version")
+            if version != version2:
+                raise ValueError('Version does not match!')
             break
 
 readme = open('README.md').read()
@@ -69,11 +71,14 @@ setup(
     license='MIT',
     classifiers=[
         'Development Status :: 3 - Alpha',
+        'Environment :: Console',
         'Intended Audience :: Developers',
-        'Natural Language :: English',
+        'Intended Audience :: Information Technology',
         'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
+        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
 )
