@@ -1,5 +1,10 @@
 ## History
 
+## 0.1.3
+
+* First tag release
+* Bug fixes
+
 ## 0.1.2
 
 * Improve test coverage
