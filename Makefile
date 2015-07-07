@@ -32,6 +32,6 @@ coverage:
 	coverage report -m
 
 release: clean
-	git tag `python setup.py -q version`
-	git push origin `python setup.py -q version`
-	python setup.py sdist upload
+	git tag `python setup.py -q -V`
+	git push origin `python setup.py -q -V`
+	python setup.py sdist bdist_wheel upload
