@@ -16,6 +16,7 @@ clean-build:
 	rm -fr build/
 	rm -fr dist/
 	rm -fr *.egg-info
+	rm -fr .tox
 
 clean-pyc:
 	@find . -iname '*.py[co]' -delete
