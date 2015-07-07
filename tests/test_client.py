@@ -49,23 +49,23 @@ class DadosGovBRClientTestCase(unittest.TestCase):
     @json_vcr.use_cassette()
     def test_search_resources_with_param(self):
         resources = list(self.api.search_resources('civil', limit=2))
-        self.assertEquals(len(resources), 2)
+        self.assertEqual(len(resources), 2)
 
     @json_vcr.use_cassette()
     def test_search_resources_empty(self):
         resources = list(self.api.search_resources('arcoiro'))
-        self.assertEquals(len(resources), 0)
+        self.assertEqual(len(resources), 0)
 
     @json_vcr.use_cassette()
     def test_search_dataset_simple(self):
         datasets = list(self.api.search_datasets('supersimples'))
-        self.assertEquals(len(datasets), 1)
-        self.assertEquals(datasets[0].name, 'supersimples')
+        self.assertEqual(len(datasets), 1)
+        self.assertEqual(datasets[0].name, 'supersimples')
 
     @json_vcr.use_cassette()
     def test_search_dataset_empty(self):
         datasets = list(self.api.search_datasets('arcoiro'))
-        self.assertEquals(len(datasets), 0)
+        self.assertEqual(len(datasets), 0)
 
     @json_vcr.use_cassette()
     def test_get_datasets(self):
@@ -77,15 +77,15 @@ class DadosGovBRClientTestCase(unittest.TestCase):
     @json_vcr.use_cassette()
     def test_get_dataset(self):
         dataset = self.api.get_dataset('cidadeshistoricas')
-        self.assertEquals(dataset.name, 'cidadeshistoricas')
+        self.assertEqual(dataset.name, 'cidadeshistoricas')
         self.assertTrue(hasattr(dataset, 'id'))
 
     @json_vcr.use_cassette()
     def test_get_dataset_by_id(self):
         dataset_id = '2c9bda21-f7db-4fd3-842a-0362873fb043'
         dataset = self.api.get_dataset(dataset_id)
-        self.assertEquals(dataset.name, 'petroleo')
-        self.assertEquals(dataset.id, dataset_id)
+        self.assertEqual(dataset.name, 'petroleo')
+        self.assertEqual(dataset.id, dataset_id)
 
     @json_vcr.use_cassette()
     def test_get_dataset_not_found(self):
@@ -103,15 +103,15 @@ class DadosGovBRClientTestCase(unittest.TestCase):
     @json_vcr.use_cassette()
     def test_get_tag(self):
         tag = self.api.get_tag('vestibular')
-        self.assertEquals(tag.name, 'vestibular')
+        self.assertEqual(tag.name, 'vestibular')
         self.assertTrue(hasattr(tag, 'id'))
 
     @json_vcr.use_cassette()
     def test_get_tag_by_id(self):
         tag_id = '35018a82-1981-4b68-9c4f-57689169f9a7'
         tag = self.api.get_tag(tag_id)
-        self.assertEquals(tag.name, 'universidades')
-        self.assertEquals(tag.id, tag_id)
+        self.assertEqual(tag.name, 'universidades')
+        self.assertEqual(tag.id, tag_id)
 
     @json_vcr.use_cassette()
     def test_get_tag_not_found(self):
