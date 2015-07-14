@@ -1,74 +1,216 @@
 {
-    "version": 1,
+    "version": 1, 
     "interactions": [
         {
-            "request": {
-                "body": null,
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "body": {
+                    "string": "{\"help\": \"\\n    Searches for resources satisfying a given search criteria.\\n\\n    It returns a dictionary with 2 fields: ``count`` and ``results``.  The\\n    ``count`` field contains the total number of Resources found without the\\n    limit or query parameters having an effect.  The ``results`` field is a\\n    list of dictized Resource objects.\\n\\n    The 'query' parameter is a required field.  It is a string of the form\\n    ``{field}:{term}`` or a list of strings, each of the same form.  Within\\n    each string, ``{field}`` is a field or extra field on the Resource domain\\n    object.\\n\\n    If ``{field}`` is ``\\\"hash\\\"``, then an attempt is made to match the\\n    `{term}` as a *prefix* of the ``Resource.hash`` field.\\n\\n    If ``{field}`` is an extra field, then an attempt is made to match against\\n    the extra fields stored against the Resource.\\n\\n    Note: The search is limited to search against extra fields declared in\\n    the config setting ``ckan.extra_resource_fields``.\\n\\n    Note: Due to a Resource's extra fields being stored as a json blob, the\\n    match is made against the json string representation.  As such, false\\n    positives may occur:\\n\\n    If the search criteria is: ::\\n\\n        query = \\\"field1:term1\\\"\\n\\n    Then a json blob with the string representation of: ::\\n\\n        {\\\"field1\\\": \\\"foo\\\", \\\"field2\\\": \\\"term1\\\"}\\n\\n    will match the search criteria!  This is a known short-coming of this\\n    approach.\\n\\n    All matches are made ignoring case; and apart from the ``\\\"hash\\\"`` field,\\n    a term matches if it is a substring of the field's value.\\n\\n    Finally, when specifying more than one search criteria, the criteria are\\n    AND-ed together.\\n\\n    The ``order`` parameter is used to control the ordering of the results.\\n    Currently only ordering one field is available, and in ascending order\\n    only.\\n\\n    The ``fields`` parameter is deprecated as it is not compatible with calling\\n    this action with a GET request to the action API.\\n\\n    The context may contain a flag, `search_query`, which if True will make\\n    this action behave as if being used by the internal search api.  ie - the\\n    results will not be dictized, and SearchErrors are thrown for bad search\\n    queries (rather than ValidationErrors).\\n\\n    :param query: The search criteria.  See above for description.\\n    :type query: string or list of strings of the form \\\"{field}:{term1}\\\"\\n    :param fields: Deprecated\\n    :type fields: dict of fields to search terms.\\n    :param order_by: A field on the Resource model that orders the results.\\n    :type order_by: string\\n    :param offset: Apply an offset to the query.\\n    :type offset: int\\n    :param limit: Apply a limit to the query.\\n    :type limit: int\\n\\n    :returns:  A dictionary with a ``count`` field, and a ``results`` field.\\n    :rtype: dict\\n\\n    \", \"success\": true, \"result\": {\"count\": 6, \"results\": [{\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"a7367c91-bcf7-4e3b-a97c-db61af8ae645\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694380\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.xml\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 0, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"bf7e7375-9b34-48f0-8263-508274e34081\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694423\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.html\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 1, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"e3c0aa80-15e0-4d6d-9754-51d521ad73e8\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694438\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.json\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 2, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"89bcebeb-fd69-4e00-8a92-ac611f2747f6\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694451\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.xml\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 3, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"05974479-f4b4-4298-99ef-a68bb6a9fd64\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694467\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.html\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 4, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"0342a4c7-5b3a-43e1-9a77-543ac9ac19aa\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694480\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.json\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 5, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}]}}"
+                }, 
                 "headers": {
-                    "Connection": [
+                    "connection": [
                         "keep-alive"
-                    ],
+                    ], 
+                    "pragma": [
+                        "no-cache"
+                    ], 
+                    "via": [
+                        "1.1 varnish"
+                    ], 
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ], 
+                    "content-length": [
+                        "7568"
+                    ], 
+                    "age": [
+                        "0"
+                    ], 
+                    "date": [
+                        "Mon, 06 Jul 2015 23:49:33 GMT"
+                    ], 
+                    "cache-control": [
+                        "no-cache"
+                    ], 
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ], 
+                    "x-varnish": [
+                        "1042718386"
+                    ], 
+                    "access-control-allow-origin": [
+                        "*"
+                    ], 
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ], 
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ]
+                }
+            }, 
+            "request": {
+                "method": "GET", 
+                "uri": "http://dados.gov.br/api/3/action/resource_search?query=name%3Arouanet", 
+                "body": null, 
+                "headers": {
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
+                    ], 
                     "Accept": [
                         "*/*"
-                    ],
+                    ], 
+                    "Connection": [
+                        "keep-alive"
+                    ], 
                     "User-Agent": [
                         "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-55-generic"
                     ]
-                },
-                "method": "GET",
-                "uri": "http://dados.gov.br/api/3/action/resource_search?query=name%3Arouanet"
-            },
+                }
+            }
+        }, 
+        {
             "response": {
                 "status": {
-                    "message": "OK",
+                    "message": "OK", 
                     "code": 200
-                },
-                "headers": {
-                    "content-length": [
-                        "7568"
-                    ],
-                    "x-varnish": [
-                        "1042718386"
-                    ],
-                    "age": [
-                        "0"
-                    ],
-                    "server": [
-                        "Apache/2.2.15 (CentOS)"
-                    ],
-                    "connection": [
-                        "keep-alive"
-                    ],
-                    "via": [
-                        "1.1 varnish"
-                    ],
-                    "pragma": [
-                        "no-cache"
-                    ],
-                    "cache-control": [
-                        "no-cache"
-                    ],
-                    "date": [
-                        "Mon, 06 Jul 2015 23:49:33 GMT"
-                    ],
-                    "access-control-allow-origin": [
-                        "*"
-                    ],
-                    "access-control-allow-methods": [
-                        "POST, PUT, GET, DELETE, OPTIONS"
-                    ],
-                    "content-type": [
-                        "application/json;charset=utf-8"
-                    ],
-                    "access-control-allow-headers": [
-                        "X-CKAN-API-KEY, Authorization, Content-Type"
-                    ]
-                },
+                }, 
                 "body": {
                     "string": "{\"help\": \"\\n    Searches for resources satisfying a given search criteria.\\n\\n    It returns a dictionary with 2 fields: ``count`` and ``results``.  The\\n    ``count`` field contains the total number of Resources found without the\\n    limit or query parameters having an effect.  The ``results`` field is a\\n    list of dictized Resource objects.\\n\\n    The 'query' parameter is a required field.  It is a string of the form\\n    ``{field}:{term}`` or a list of strings, each of the same form.  Within\\n    each string, ``{field}`` is a field or extra field on the Resource domain\\n    object.\\n\\n    If ``{field}`` is ``\\\"hash\\\"``, then an attempt is made to match the\\n    `{term}` as a *prefix* of the ``Resource.hash`` field.\\n\\n    If ``{field}`` is an extra field, then an attempt is made to match against\\n    the extra fields stored against the Resource.\\n\\n    Note: The search is limited to search against extra fields declared in\\n    the config setting ``ckan.extra_resource_fields``.\\n\\n    Note: Due to a Resource's extra fields being stored as a json blob, the\\n    match is made against the json string representation.  As such, false\\n    positives may occur:\\n\\n    If the search criteria is: ::\\n\\n        query = \\\"field1:term1\\\"\\n\\n    Then a json blob with the string representation of: ::\\n\\n        {\\\"field1\\\": \\\"foo\\\", \\\"field2\\\": \\\"term1\\\"}\\n\\n    will match the search criteria!  This is a known short-coming of this\\n    approach.\\n\\n    All matches are made ignoring case; and apart from the ``\\\"hash\\\"`` field,\\n    a term matches if it is a substring of the field's value.\\n\\n    Finally, when specifying more than one search criteria, the criteria are\\n    AND-ed together.\\n\\n    The ``order`` parameter is used to control the ordering of the results.\\n    Currently only ordering one field is available, and in ascending order\\n    only.\\n\\n    The ``fields`` parameter is deprecated as it is not compatible with calling\\n    this action with a GET request to the action API.\\n\\n    The context may contain a flag, `search_query`, which if True will make\\n    this action behave as if being used by the internal search api.  ie - the\\n    results will not be dictized, and SearchErrors are thrown for bad search\\n    queries (rather than ValidationErrors).\\n\\n    :param query: The search criteria.  See above for description.\\n    :type query: string or list of strings of the form \\\"{field}:{term1}\\\"\\n    :param fields: Deprecated\\n    :type fields: dict of fields to search terms.\\n    :param order_by: A field on the Resource model that orders the results.\\n    :type order_by: string\\n    :param offset: Apply an offset to the query.\\n    :type offset: int\\n    :param limit: Apply a limit to the query.\\n    :type limit: int\\n\\n    :returns:  A dictionary with a ``count`` field, and a ``results`` field.\\n    :rtype: dict\\n\\n    \", \"success\": true, \"result\": {\"count\": 6, \"results\": [{\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"a7367c91-bcf7-4e3b-a97c-db61af8ae645\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694380\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.xml\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 0, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"bf7e7375-9b34-48f0-8263-508274e34081\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694423\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.html\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 1, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"e3c0aa80-15e0-4d6d-9754-51d521ad73e8\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694438\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.json\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 2, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"89bcebeb-fd69-4e00-8a92-ac611f2747f6\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694451\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.xml\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 3, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"05974479-f4b4-4298-99ef-a68bb6a9fd64\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694467\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.html\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 4, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"0342a4c7-5b3a-43e1-9a77-543ac9ac19aa\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694480\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.json\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 5, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}]}}"
+                }, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Pragma": [
+                        "no-cache"
+                    ], 
+                    "Via": [
+                        "1.1 varnish"
+                    ], 
+                    "Access-Control-Allow-Headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ], 
+                    "Content-Length": [
+                        "7568"
+                    ], 
+                    "Age": [
+                        "0"
+                    ], 
+                    "Date": [
+                        "Tue, 14 Jul 2015 02:35:52 GMT"
+                    ], 
+                    "Cache-Control": [
+                        "no-cache"
+                    ], 
+                    "Access-Control-Allow-Methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ], 
+                    "X-Varnish": [
+                        "1152414322"
+                    ], 
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ], 
+                    "Server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ], 
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ]
+                }
+            }, 
+            "request": {
+                "method": "GET", 
+                "uri": "http://dados.gov.br/api/3/action/resource_search?query=name%3Arouanet", 
+                "body": null, 
+                "headers": {
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/3.4.0 Linux/3.13.0-57-generic"
+                    ]
+                }
+            }
+        }, 
+        {
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "body": {
+                    "string": "{\"help\": \"\\n    Searches for resources satisfying a given search criteria.\\n\\n    It returns a dictionary with 2 fields: ``count`` and ``results``.  The\\n    ``count`` field contains the total number of Resources found without the\\n    limit or query parameters having an effect.  The ``results`` field is a\\n    list of dictized Resource objects.\\n\\n    The 'query' parameter is a required field.  It is a string of the form\\n    ``{field}:{term}`` or a list of strings, each of the same form.  Within\\n    each string, ``{field}`` is a field or extra field on the Resource domain\\n    object.\\n\\n    If ``{field}`` is ``\\\"hash\\\"``, then an attempt is made to match the\\n    `{term}` as a *prefix* of the ``Resource.hash`` field.\\n\\n    If ``{field}`` is an extra field, then an attempt is made to match against\\n    the extra fields stored against the Resource.\\n\\n    Note: The search is limited to search against extra fields declared in\\n    the config setting ``ckan.extra_resource_fields``.\\n\\n    Note: Due to a Resource's extra fields being stored as a json blob, the\\n    match is made against the json string representation.  As such, false\\n    positives may occur:\\n\\n    If the search criteria is: ::\\n\\n        query = \\\"field1:term1\\\"\\n\\n    Then a json blob with the string representation of: ::\\n\\n        {\\\"field1\\\": \\\"foo\\\", \\\"field2\\\": \\\"term1\\\"}\\n\\n    will match the search criteria!  This is a known short-coming of this\\n    approach.\\n\\n    All matches are made ignoring case; and apart from the ``\\\"hash\\\"`` field,\\n    a term matches if it is a substring of the field's value.\\n\\n    Finally, when specifying more than one search criteria, the criteria are\\n    AND-ed together.\\n\\n    The ``order`` parameter is used to control the ordering of the results.\\n    Currently only ordering one field is available, and in ascending order\\n    only.\\n\\n    The ``fields`` parameter is deprecated as it is not compatible with calling\\n    this action with a GET request to the action API.\\n\\n    The context may contain a flag, `search_query`, which if True will make\\n    this action behave as if being used by the internal search api.  ie - the\\n    results will not be dictized, and SearchErrors are thrown for bad search\\n    queries (rather than ValidationErrors).\\n\\n    :param query: The search criteria.  See above for description.\\n    :type query: string or list of strings of the form \\\"{field}:{term1}\\\"\\n    :param fields: Deprecated\\n    :type fields: dict of fields to search terms.\\n    :param order_by: A field on the Resource model that orders the results.\\n    :type order_by: string\\n    :param offset: Apply an offset to the query.\\n    :type offset: int\\n    :param limit: Apply a limit to the query.\\n    :type limit: int\\n\\n    :returns:  A dictionary with a ``count`` field, and a ``results`` field.\\n    :rtype: dict\\n\\n    \", \"success\": true, \"result\": {\"count\": 6, \"results\": [{\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"a7367c91-bcf7-4e3b-a97c-db61af8ae645\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694380\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.xml\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 0, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"bf7e7375-9b34-48f0-8263-508274e34081\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694423\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.html\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 1, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"e3c0aa80-15e0-4d6d-9754-51d521ad73e8\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"N\\u00famero de projetos aprovados pela Lei Rouanet - projetos culturais aprovados para receber incentivos fiscais.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"N\\u00famero de projetos aprovados pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694438\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1477.json\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 2, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"89bcebeb-fd69-4e00-8a92-ac611f2747f6\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"XML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/xml\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694451\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.xml\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 3, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"05974479-f4b4-4298-99ef-a68bb6a9fd64\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"HTML\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694467\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.html\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 4, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}, {\"resource_group_id\": \"1119d7d3-4461-4863-8b68-4fcc7d556515\", \"cache_last_updated\": null, \"webstore_last_updated\": null, \"id\": \"0342a4c7-5b3a-43e1-9a77-543ac9ac19aa\", \"size\": null, \"state\": \"active\", \"last_modified\": null, \"hash\": \"\", \"description\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet.\", \"format\": \"JSON\", \"mimetype_inner\": null, \"url_type\": null, \"mimetype\": \"application/json\", \"cache_url\": null, \"name\": \"Valores captados por incentivos fiscais \\u00e0 projetos culturais pela Lei Rouanet\", \"created\": \"2015-07-02T17:20:31.694480\", \"url\": \"http://api.pgi.gov.br/api/1/serie/1479.json\", \"webstore_url\": \"http://www.cultura.gov.br/\", \"position\": 5, \"revision_id\": \"be970743-6222-49ea-b91f-39a30130098a\", \"resource_type\": null}]}}"
+                }, 
+                "headers": {
+                    "connection": [
+                        "keep-alive"
+                    ], 
+                    "pragma": [
+                        "no-cache"
+                    ], 
+                    "via": [
+                        "1.1 varnish"
+                    ], 
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ], 
+                    "content-length": [
+                        "7568"
+                    ], 
+                    "age": [
+                        "49"
+                    ], 
+                    "date": [
+                        "Tue, 14 Jul 2015 02:36:41 GMT"
+                    ], 
+                    "cache-control": [
+                        "no-cache"
+                    ], 
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ], 
+                    "x-varnish": [
+                        "1152414386 1152414322"
+                    ], 
+                    "access-control-allow-origin": [
+                        "*"
+                    ], 
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ], 
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ]
+                }
+            }, 
+            "request": {
+                "method": "GET", 
+                "uri": "http://dados.gov.br/api/3/action/resource_search?query=name%3Arouanet", 
+                "body": null, 
+                "headers": {
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
                 }
             }
         }

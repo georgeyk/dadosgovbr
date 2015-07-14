@@ -1,74 +1,216 @@
 {
-    "version": 1,
+    "version": 1, 
     "interactions": [
         {
-            "request": {
-                "body": null,
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": true, \"result\": {\"license_title\": \"Licen\\u00e7a N\\u00e3o Especificada\", \"maintainer\": \"Grupo de Intelig\\u00eancia  Territorial Estrat\\u00e9gica \\u2013 GITE/Embrapa\", \"relationships_as_object\": [], \"private\": false, \"maintainer_email\": \"\", \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"id\": \"d4592a07-9c59-4833-895e-57f2c7450a5f\", \"metadata_created\": \"2015-04-19T19:52:51.762851\", \"metadata_modified\": \"2015-07-01T17:55:25.348044\", \"author\": \"Secretaria do Programa de  Acelera\\u00e7\\u00e3o do Crescimento - SEPAC\", \"author_email\": \"\", \"state\": \"active\", \"version\": null, \"creator_user_id\": \"3c565e5a-59a4-46b0-a59d-89bfeb13c447\", \"type\": \"dataset\", \"resources\": [{\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"234b4b37-ad8a-40ad-b094-e5c6e7e5efbf\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"CSV\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"text/csv\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514509\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=CSV\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 0, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"14bbdb06-4d8b-46f8-8395-5d27fb4e0e47\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"geojson\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/vnd.geo json\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514540\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=JSON\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 1, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"aa268194-39fe-41bf-8653-37eb17978ecb\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"zip shp\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/zip\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514549\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=SHAPE-ZIP\", \"webstore_url\": null, \"mimetype_inner\": \"application/octet-stream\", \"position\": 2, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"a0a54f37-0ab3-4663-b3ac-2bc6893ce085\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"KML\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/vnd.google-earth.kmz\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514556\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WMS&version=1.1.0&request=GetMap&layers=cidadeshistoricas&width=1024&height=768&bbox=-74,-34,-29,6&format=application/vnd.google-earth.kmz xml\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 3, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"e565d2bd-cd8a-4483-9de7-69b675de8e7f\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"HTML\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas no visualizador INDE\", \"created\": \"2015-07-01T14:55:25.514563\", \"url\": \"http://visualizador.inde.gov.br/VisualizaCamada/1019\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 4, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}], \"num_resources\": 5, \"tags\": [{\"vocabulary_id\": null, \"display_name\": \"Cartografia\", \"name\": \"Cartografia\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"d0b051e6-f1f3-485e-b6fa-7a94735fb45c\"}, {\"vocabulary_id\": null, \"display_name\": \"Geoespacial\", \"name\": \"Geoespacial\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"621341d5-0462-4fed-9e1b-90752803356b\"}, {\"vocabulary_id\": null, \"display_name\": \"Geoservi\\u00e7o\", \"name\": \"Geoservi\\u00e7o\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"04122533-8d9f-4001-9d3a-d5af1ea7b62f\"}, {\"vocabulary_id\": null, \"display_name\": \"INDE\", \"name\": \"INDE\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"06f7b020-8dbe-490b-8028-728e23e2336c\"}], \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"groups\": [], \"license_id\": \"notspecified\", \"relationships_as_subject\": [], \"num_tags\": 4, \"organization\": null, \"name\": \"cidadeshistoricas\", \"isopen\": false, \"url\": \"http://www.visualizador.inde.gov.br\", \"notes\": \"Empreendimentos pertencentes a Carteira do PAC. Dados  do 10\\u00ba balan\\u00e7o do PAC referentes ao per\\u00edodo  de Mar\\u00e7o a Junho de 2014e  fornecem  informa\\u00e7\\u00f5es sobre os empreendimentos presentes na carteira de projetos do  programa. Os dados est\\u00e3o em escalade planejamento e podem ocorrer  imprecis\\u00f5es em escala municipal.\", \"owner_org\": null, \"extras\": [{\"key\": \"spatial\", \"value\": \"\\\"type\\\":\\\"Polygon\\\", \\\"coordinates\\\":[[[-67.5999298095703,-33.752082824707],[-28.8359069824219,-33.752082824707],[-28.8359069824219,5.272225],[-67.5999298095703,5.272225],[-67.5999298095703,-33.752082824707]]]\"}, {\"key\": \"\\u00d3rg\\u00e3o - Esfera\", \"value\": \"Federal\"}, {\"key\": \"\\u00d3rg\\u00e3o - Poder\", \"value\": \"Executivo\"}], \"title\": \"Cidades Hist\\u00f3ricas - PAC 10\\u00ba Balan\\u00e7o\", \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\"}}"
+                }, 
                 "headers": {
-                    "Connection": [
+                    "connection": [
                         "keep-alive"
-                    ],
+                    ], 
+                    "pragma": [
+                        "no-cache"
+                    ], 
+                    "via": [
+                        "1.1 varnish"
+                    ], 
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ], 
+                    "content-length": [
+                        "7015"
+                    ], 
+                    "age": [
+                        "0"
+                    ], 
+                    "date": [
+                        "Mon, 06 Jul 2015 23:49:31 GMT"
+                    ], 
+                    "cache-control": [
+                        "no-cache"
+                    ], 
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ], 
+                    "x-varnish": [
+                        "1042718374"
+                    ], 
+                    "access-control-allow-origin": [
+                        "*"
+                    ], 
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ], 
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ]
+                }
+            }, 
+            "request": {
+                "method": "GET", 
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=cidadeshistoricas", 
+                "body": null, 
+                "headers": {
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
+                    ], 
                     "Accept": [
                         "*/*"
-                    ],
+                    ], 
+                    "Connection": [
+                        "keep-alive"
+                    ], 
                     "User-Agent": [
                         "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-55-generic"
                     ]
-                },
-                "method": "GET",
-                "uri": "http://dados.gov.br/api/3/action/package_show?id=cidadeshistoricas"
-            },
+                }
+            }
+        }, 
+        {
             "response": {
                 "status": {
-                    "message": "OK",
+                    "message": "OK", 
                     "code": 200
-                },
-                "headers": {
-                    "content-length": [
-                        "7015"
-                    ],
-                    "x-varnish": [
-                        "1042718374"
-                    ],
-                    "age": [
-                        "0"
-                    ],
-                    "server": [
-                        "Apache/2.2.15 (CentOS)"
-                    ],
-                    "connection": [
-                        "keep-alive"
-                    ],
-                    "via": [
-                        "1.1 varnish"
-                    ],
-                    "pragma": [
-                        "no-cache"
-                    ],
-                    "cache-control": [
-                        "no-cache"
-                    ],
-                    "date": [
-                        "Mon, 06 Jul 2015 23:49:31 GMT"
-                    ],
-                    "access-control-allow-origin": [
-                        "*"
-                    ],
-                    "access-control-allow-methods": [
-                        "POST, PUT, GET, DELETE, OPTIONS"
-                    ],
-                    "content-type": [
-                        "application/json;charset=utf-8"
-                    ],
-                    "access-control-allow-headers": [
-                        "X-CKAN-API-KEY, Authorization, Content-Type"
-                    ]
-                },
+                }, 
                 "body": {
                     "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": true, \"result\": {\"license_title\": \"Licen\\u00e7a N\\u00e3o Especificada\", \"maintainer\": \"Grupo de Intelig\\u00eancia  Territorial Estrat\\u00e9gica \\u2013 GITE/Embrapa\", \"relationships_as_object\": [], \"private\": false, \"maintainer_email\": \"\", \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"id\": \"d4592a07-9c59-4833-895e-57f2c7450a5f\", \"metadata_created\": \"2015-04-19T19:52:51.762851\", \"metadata_modified\": \"2015-07-01T17:55:25.348044\", \"author\": \"Secretaria do Programa de  Acelera\\u00e7\\u00e3o do Crescimento - SEPAC\", \"author_email\": \"\", \"state\": \"active\", \"version\": null, \"creator_user_id\": \"3c565e5a-59a4-46b0-a59d-89bfeb13c447\", \"type\": \"dataset\", \"resources\": [{\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"234b4b37-ad8a-40ad-b094-e5c6e7e5efbf\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"CSV\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"text/csv\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514509\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=CSV\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 0, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"14bbdb06-4d8b-46f8-8395-5d27fb4e0e47\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"geojson\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/vnd.geo json\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514540\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=JSON\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 1, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"aa268194-39fe-41bf-8653-37eb17978ecb\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"zip shp\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/zip\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514549\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=SHAPE-ZIP\", \"webstore_url\": null, \"mimetype_inner\": \"application/octet-stream\", \"position\": 2, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"a0a54f37-0ab3-4663-b3ac-2bc6893ce085\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"KML\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/vnd.google-earth.kmz\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514556\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WMS&version=1.1.0&request=GetMap&layers=cidadeshistoricas&width=1024&height=768&bbox=-74,-34,-29,6&format=application/vnd.google-earth.kmz xml\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 3, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"e565d2bd-cd8a-4483-9de7-69b675de8e7f\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"HTML\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas no visualizador INDE\", \"created\": \"2015-07-01T14:55:25.514563\", \"url\": \"http://visualizador.inde.gov.br/VisualizaCamada/1019\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 4, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}], \"num_resources\": 5, \"tags\": [{\"vocabulary_id\": null, \"display_name\": \"Cartografia\", \"name\": \"Cartografia\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"d0b051e6-f1f3-485e-b6fa-7a94735fb45c\"}, {\"vocabulary_id\": null, \"display_name\": \"Geoespacial\", \"name\": \"Geoespacial\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"621341d5-0462-4fed-9e1b-90752803356b\"}, {\"vocabulary_id\": null, \"display_name\": \"Geoservi\\u00e7o\", \"name\": \"Geoservi\\u00e7o\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"04122533-8d9f-4001-9d3a-d5af1ea7b62f\"}, {\"vocabulary_id\": null, \"display_name\": \"INDE\", \"name\": \"INDE\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"06f7b020-8dbe-490b-8028-728e23e2336c\"}], \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"groups\": [], \"license_id\": \"notspecified\", \"relationships_as_subject\": [], \"num_tags\": 4, \"organization\": null, \"name\": \"cidadeshistoricas\", \"isopen\": false, \"url\": \"http://www.visualizador.inde.gov.br\", \"notes\": \"Empreendimentos pertencentes a Carteira do PAC. Dados  do 10\\u00ba balan\\u00e7o do PAC referentes ao per\\u00edodo  de Mar\\u00e7o a Junho de 2014e  fornecem  informa\\u00e7\\u00f5es sobre os empreendimentos presentes na carteira de projetos do  programa. Os dados est\\u00e3o em escalade planejamento e podem ocorrer  imprecis\\u00f5es em escala municipal.\", \"owner_org\": null, \"extras\": [{\"key\": \"spatial\", \"value\": \"\\\"type\\\":\\\"Polygon\\\", \\\"coordinates\\\":[[[-67.5999298095703,-33.752082824707],[-28.8359069824219,-33.752082824707],[-28.8359069824219,5.272225],[-67.5999298095703,5.272225],[-67.5999298095703,-33.752082824707]]]\"}, {\"key\": \"\\u00d3rg\\u00e3o - Esfera\", \"value\": \"Federal\"}, {\"key\": \"\\u00d3rg\\u00e3o - Poder\", \"value\": \"Executivo\"}], \"title\": \"Cidades Hist\\u00f3ricas - PAC 10\\u00ba Balan\\u00e7o\", \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\"}}"
+                }, 
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "Pragma": [
+                        "no-cache"
+                    ], 
+                    "Via": [
+                        "1.1 varnish"
+                    ], 
+                    "Access-Control-Allow-Headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ], 
+                    "Content-Length": [
+                        "7015"
+                    ], 
+                    "Age": [
+                        "0"
+                    ], 
+                    "Date": [
+                        "Tue, 14 Jul 2015 02:35:48 GMT"
+                    ], 
+                    "Cache-Control": [
+                        "no-cache"
+                    ], 
+                    "Access-Control-Allow-Methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ], 
+                    "X-Varnish": [
+                        "1152414308"
+                    ], 
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ], 
+                    "Server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ], 
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ]
+                }
+            }, 
+            "request": {
+                "method": "GET", 
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=cidadeshistoricas", 
+                "body": null, 
+                "headers": {
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/3.4.0 Linux/3.13.0-57-generic"
+                    ]
+                }
+            }
+        }, 
+        {
+            "response": {
+                "status": {
+                    "message": "OK", 
+                    "code": 200
+                }, 
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": true, \"result\": {\"license_title\": \"Licen\\u00e7a N\\u00e3o Especificada\", \"maintainer\": \"Grupo de Intelig\\u00eancia  Territorial Estrat\\u00e9gica \\u2013 GITE/Embrapa\", \"relationships_as_object\": [], \"private\": false, \"maintainer_email\": \"\", \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"id\": \"d4592a07-9c59-4833-895e-57f2c7450a5f\", \"metadata_created\": \"2015-04-19T19:52:51.762851\", \"metadata_modified\": \"2015-07-01T17:55:25.348044\", \"author\": \"Secretaria do Programa de  Acelera\\u00e7\\u00e3o do Crescimento - SEPAC\", \"author_email\": \"\", \"state\": \"active\", \"version\": null, \"creator_user_id\": \"3c565e5a-59a4-46b0-a59d-89bfeb13c447\", \"type\": \"dataset\", \"resources\": [{\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"234b4b37-ad8a-40ad-b094-e5c6e7e5efbf\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"CSV\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"text/csv\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514509\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=CSV\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 0, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"14bbdb06-4d8b-46f8-8395-5d27fb4e0e47\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"geojson\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/vnd.geo json\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514540\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=JSON\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 1, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"aa268194-39fe-41bf-8653-37eb17978ecb\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"zip shp\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/zip\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514549\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WFS&version=1.0.0&request=GetFeature&typeName=cidadeshistoricas&outputFormat=SHAPE-ZIP\", \"webstore_url\": null, \"mimetype_inner\": \"application/octet-stream\", \"position\": 2, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"a0a54f37-0ab3-4663-b3ac-2bc6893ce085\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"KML\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"application/vnd.google-earth.kmz\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas\", \"created\": \"2015-07-01T14:55:25.514556\", \"url\": \"http://189.9.137.169:8080/geoserver/pac/wms?service=WMS&version=1.1.0&request=GetMap&layers=cidadeshistoricas&width=1024&height=768&bbox=-74,-34,-29,6&format=application/vnd.google-earth.kmz xml\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 3, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}, {\"resource_group_id\": \"5174f444-2417-4a68-b647-68978440fb3a\", \"cache_last_updated\": null, \"revision_timestamp\": \"2015-07-01T17:55:25.346923\", \"webstore_last_updated\": null, \"id\": \"e565d2bd-cd8a-4483-9de7-69b675de8e7f\", \"size\": null, \"state\": \"active\", \"hash\": \"\", \"description\": \"\", \"format\": \"HTML\", \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"last_modified\": null, \"url_type\": null, \"mimetype\": \"text/html\", \"cache_url\": null, \"name\": \"Cidades Hist\\u00f3ricas no visualizador INDE\", \"created\": \"2015-07-01T14:55:25.514563\", \"url\": \"http://visualizador.inde.gov.br/VisualizaCamada/1019\", \"webstore_url\": null, \"mimetype_inner\": null, \"position\": 4, \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\", \"resource_type\": null}], \"num_resources\": 5, \"tags\": [{\"vocabulary_id\": null, \"display_name\": \"Cartografia\", \"name\": \"Cartografia\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"d0b051e6-f1f3-485e-b6fa-7a94735fb45c\"}, {\"vocabulary_id\": null, \"display_name\": \"Geoespacial\", \"name\": \"Geoespacial\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"621341d5-0462-4fed-9e1b-90752803356b\"}, {\"vocabulary_id\": null, \"display_name\": \"Geoservi\\u00e7o\", \"name\": \"Geoservi\\u00e7o\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"04122533-8d9f-4001-9d3a-d5af1ea7b62f\"}, {\"vocabulary_id\": null, \"display_name\": \"INDE\", \"name\": \"INDE\", \"revision_timestamp\": \"2015-04-19T19:52:51.762851\", \"state\": \"active\", \"id\": \"06f7b020-8dbe-490b-8028-728e23e2336c\"}], \"tracking_summary\": {\"total\": 0, \"recent\": 0}, \"groups\": [], \"license_id\": \"notspecified\", \"relationships_as_subject\": [], \"num_tags\": 4, \"organization\": null, \"name\": \"cidadeshistoricas\", \"isopen\": false, \"url\": \"http://www.visualizador.inde.gov.br\", \"notes\": \"Empreendimentos pertencentes a Carteira do PAC. Dados  do 10\\u00ba balan\\u00e7o do PAC referentes ao per\\u00edodo  de Mar\\u00e7o a Junho de 2014e  fornecem  informa\\u00e7\\u00f5es sobre os empreendimentos presentes na carteira de projetos do  programa. Os dados est\\u00e3o em escalade planejamento e podem ocorrer  imprecis\\u00f5es em escala municipal.\", \"owner_org\": null, \"extras\": [{\"key\": \"spatial\", \"value\": \"\\\"type\\\":\\\"Polygon\\\", \\\"coordinates\\\":[[[-67.5999298095703,-33.752082824707],[-28.8359069824219,-33.752082824707],[-28.8359069824219,5.272225],[-67.5999298095703,5.272225],[-67.5999298095703,-33.752082824707]]]\"}, {\"key\": \"\\u00d3rg\\u00e3o - Esfera\", \"value\": \"Federal\"}, {\"key\": \"\\u00d3rg\\u00e3o - Poder\", \"value\": \"Executivo\"}], \"title\": \"Cidades Hist\\u00f3ricas - PAC 10\\u00ba Balan\\u00e7o\", \"revision_id\": \"c4322da4-0017-4794-b06e-70cd6bbab241\"}}"
+                }, 
+                "headers": {
+                    "connection": [
+                        "keep-alive"
+                    ], 
+                    "pragma": [
+                        "no-cache"
+                    ], 
+                    "via": [
+                        "1.1 varnish"
+                    ], 
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ], 
+                    "content-length": [
+                        "7015"
+                    ], 
+                    "age": [
+                        "51"
+                    ], 
+                    "date": [
+                        "Tue, 14 Jul 2015 02:36:40 GMT"
+                    ], 
+                    "cache-control": [
+                        "no-cache"
+                    ], 
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ], 
+                    "x-varnish": [
+                        "1152414374 1152414308"
+                    ], 
+                    "access-control-allow-origin": [
+                        "*"
+                    ], 
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ], 
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ]
+                }
+            }, 
+            "request": {
+                "method": "GET", 
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=cidadeshistoricas", 
+                "body": null, 
+                "headers": {
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ], 
+                    "Accept": [
+                        "*/*"
+                    ], 
+                    "Connection": [
+                        "keep-alive"
+                    ], 
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
                 }
             }
         }
