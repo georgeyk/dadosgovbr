@@ -24,6 +24,7 @@
 # SOFTWARE.
 #
 
+import os
 import os.path
 import unittest
 
@@ -32,7 +33,8 @@ import vcr
 from dadosgovbr import DadosGovBR, DadosGovBRException
 
 fixtures = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'fixtures')
-json_vcr = vcr.VCR(serializer='json', cassette_library_dir=fixtures)
+json_vcr = vcr.VCR(serializer='json', cassette_library_dir=fixtures,
+                   record_mode=os.environ.get('VCR_RECORD_MODE', 'once'))
 
 
 class DadosGovBRClientTestCase(unittest.TestCase):
