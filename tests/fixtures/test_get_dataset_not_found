@@ -1,216 +1,1565 @@
 {
-    "version": 1, 
+    "version": 1,
     "interactions": [
         {
-            "response": {
-                "status": {
-                    "message": "Not Found", 
-                    "code": 404
-                }, 
-                "body": {
-                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
-                }, 
-                "headers": {
-                    "connection": [
-                        "keep-alive"
-                    ], 
-                    "pragma": [
-                        "no-cache"
-                    ], 
-                    "via": [
-                        "1.1 varnish"
-                    ], 
-                    "access-control-allow-headers": [
-                        "X-CKAN-API-KEY, Authorization, Content-Type"
-                    ], 
-                    "content-length": [
-                        "453"
-                    ], 
-                    "age": [
-                        "0"
-                    ], 
-                    "date": [
-                        "Mon, 06 Jul 2015 23:49:31 GMT"
-                    ], 
-                    "cache-control": [
-                        "no-cache"
-                    ], 
-                    "server": [
-                        "Apache/2.2.15 (CentOS)"
-                    ], 
-                    "x-varnish": [
-                        "1042718376"
-                    ], 
-                    "access-control-allow-origin": [
-                        "*"
-                    ], 
-                    "access-control-allow-methods": [
-                        "POST, PUT, GET, DELETE, OPTIONS"
-                    ], 
-                    "content-type": [
-                        "application/json;charset=utf-8"
-                    ]
-                }
-            }, 
             "request": {
-                "method": "GET", 
-                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro", 
-                "body": null, 
+                "body": null,
                 "headers": {
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ], 
-                    "Accept": [
-                        "*/*"
-                    ], 
                     "Connection": [
                         "keep-alive"
-                    ], 
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
                     "User-Agent": [
                         "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-55-generic"
                     ]
-                }
-            }
-        }, 
-        {
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
             "response": {
                 "status": {
-                    "message": "Not Found", 
+                    "message": "Not Found",
                     "code": 404
-                }, 
+                },
                 "body": {
                     "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
-                }, 
+                },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ], 
-                    "Pragma": [
-                        "no-cache"
-                    ], 
-                    "Via": [
-                        "1.1 varnish"
-                    ], 
-                    "Access-Control-Allow-Headers": [
-                        "X-CKAN-API-KEY, Authorization, Content-Type"
-                    ], 
-                    "Content-Length": [
+                    "content-length": [
                         "453"
-                    ], 
-                    "Age": [
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
                         "0"
-                    ], 
-                    "Date": [
-                        "Tue, 14 Jul 2015 02:35:49 GMT"
-                    ], 
-                    "Cache-Control": [
-                        "no-cache"
-                    ], 
-                    "Access-Control-Allow-Methods": [
-                        "POST, PUT, GET, DELETE, OPTIONS"
-                    ], 
-                    "X-Varnish": [
-                        "1152414310"
-                    ], 
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ], 
-                    "Server": [
+                    ],
+                    "server": [
                         "Apache/2.2.15 (CentOS)"
-                    ], 
-                    "Content-Type": [
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1042718376"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Mon, 06 Jul 2015 23:49:31 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
                         "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
                     ]
                 }
-            }, 
+            }
+        },
+        {
             "request": {
-                "method": "GET", 
-                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro", 
-                "body": null, 
+                "body": null,
                 "headers": {
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ], 
-                    "Accept": [
-                        "*/*"
-                    ], 
                     "Connection": [
                         "keep-alive"
-                    ], 
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
                     "User-Agent": [
                         "python-requests/2.7.0 CPython/3.4.0 Linux/3.13.0-57-generic"
                     ]
-                }
-            }
-        }, 
-        {
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
             "response": {
                 "status": {
-                    "message": "Not Found", 
+                    "message": "Not Found",
                     "code": 404
-                }, 
+                },
                 "body": {
                     "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
-                }, 
+                },
                 "headers": {
-                    "connection": [
-                        "keep-alive"
-                    ], 
-                    "pragma": [
-                        "no-cache"
-                    ], 
-                    "via": [
-                        "1.1 varnish"
-                    ], 
-                    "access-control-allow-headers": [
-                        "X-CKAN-API-KEY, Authorization, Content-Type"
-                    ], 
-                    "content-length": [
+                    "Content-Length": [
                         "453"
-                    ], 
-                    "age": [
-                        "51"
-                    ], 
-                    "date": [
-                        "Tue, 14 Jul 2015 02:36:40 GMT"
-                    ], 
-                    "cache-control": [
-                        "no-cache"
-                    ], 
-                    "server": [
+                    ],
+                    "Via": [
+                        "1.1 varnish"
+                    ],
+                    "Age": [
+                        "0"
+                    ],
+                    "Server": [
                         "Apache/2.2.15 (CentOS)"
-                    ], 
-                    "x-varnish": [
-                        "1152414377 1152414310"
-                    ], 
-                    "access-control-allow-origin": [
-                        "*"
-                    ], 
-                    "access-control-allow-methods": [
-                        "POST, PUT, GET, DELETE, OPTIONS"
-                    ], 
-                    "content-type": [
-                        "application/json;charset=utf-8"
-                    ]
-                }
-            }, 
-            "request": {
-                "method": "GET", 
-                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro", 
-                "body": null, 
-                "headers": {
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ], 
-                    "Accept": [
-                        "*/*"
-                    ], 
+                    ],
                     "Connection": [
                         "keep-alive"
-                    ], 
+                    ],
+                    "X-Varnish": [
+                        "1152414310"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Cache-Control": [
+                        "no-cache"
+                    ],
+                    "Date": [
+                        "Tue, 14 Jul 2015 02:35:49 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ]
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
                     "User-Agent": [
                         "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
                     ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "51"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152414377 1152414310"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 02:36:40 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152523342"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 22:51:36 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152523801"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 22:56:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152524217"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:01:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152524671"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:06:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152525104"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:11:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152525522"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:16:33 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152526110"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:21:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152526582"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:26:33 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152527011"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:31:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152527339"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:36:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152527747"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:41:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152528144"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:46:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152528740"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:51:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152529233"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Tue, 14 Jul 2015 23:56:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152529676"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Wed, 15 Jul 2015 00:01:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152530158"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Wed, 15 Jul 2015 00:06:36 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152530570"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Wed, 15 Jul 2015 00:11:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "x-varnish": [
+                        "1152531110"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Wed, 15 Jul 2015 00:16:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "body": null,
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.7.0 CPython/2.7.6 Linux/3.13.0-57-generic"
+                    ]
+                },
+                "method": "GET",
+                "uri": "http://dados.gov.br/api/3/action/package_show?id=arcoiro"
+            },
+            "response": {
+                "status": {
+                    "message": "Not Found",
+                    "code": 404
+                },
+                "headers": {
+                    "content-length": [
+                        "453"
+                    ],
+                    "x-varnish": [
+                        "1152597355"
+                    ],
+                    "age": [
+                        "0"
+                    ],
+                    "server": [
+                        "Apache/2.2.15 (CentOS)"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "via": [
+                        "1.1 varnish"
+                    ],
+                    "pragma": [
+                        "no-cache"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "date": [
+                        "Wed, 15 Jul 2015 15:36:34 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-methods": [
+                        "POST, PUT, GET, DELETE, OPTIONS"
+                    ],
+                    "content-type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "access-control-allow-headers": [
+                        "X-CKAN-API-KEY, Authorization, Content-Type"
+                    ]
+                },
+                "body": {
+                    "string": "{\"help\": \"Return the metadata of a dataset (package) and its resources.\\n\\n    :param id: the id or name of the dataset\\n    :type id: string\\n    :param use_default_schema: use default package schema instead of\\n        a custom schema defined with an IDatasetForm plugin (default: False)\\n    :type use_default_schema: bool\\n\\n    :rtype: dictionary\\n\\n    \", \"success\": false, \"error\": {\"message\": \"N\\u00e3o encontrado\", \"__type\": \"Not Found Error\"}}"
                 }
             }
         }
